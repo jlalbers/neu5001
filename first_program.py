@@ -6,7 +6,8 @@ Module 1 Lab: Getting Started
 Prints FUN in large letters.
 '''
 
-def main(): 
+
+def main():
 
     print('FFFFFFFFFF    UUU    UUU    NNN     NNN')
     print('FFFFFFFFFF    UUU    UUU    NNNN    NNN')
@@ -17,5 +18,6 @@ def main():
     print('FFF           UUU    UUU    NNN   NNNNN')
     print('FFF            UUUUUUUU     NNN    NNNN')
     print('FFF             UUUUUU      NNN     NNN')
+
 
 main()
