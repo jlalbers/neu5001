@@ -1,6 +1,16 @@
+'''
+Jameson Albers
+CS 5001
+Spring 2021
+Module 2 Practice 1
+
+Calculates accrued compound monthly interest after 1, 2, and 3 months.
+'''
+
+
 def main():
 
-    # # Prompts user to input the initial savings account balance
+    # Prompts user to input the initial savings account balance
     principle = float(input('Enter the initial savings balance: '))
 
     rate = 0.06  # The annual interest rate of the account
