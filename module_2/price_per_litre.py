@@ -17,7 +17,7 @@ def main():
 
     # Calculate price per litre
     unit_price_6_pack = price_6_pack / (6 * 0.355)
-    unit_price_2_litre = price_2_litre = price_2_litre / 2
+    unit_price_2_litre = price_2_litre / 2
 
     # Print unit prices
     print('Six-pack price per litre:', unit_price_6_pack)
