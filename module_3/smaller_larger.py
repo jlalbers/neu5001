@@ -13,7 +13,7 @@ def main():
     # Get first and second values
     first = float(input('Enter the first number: '))
     second = float(input('Enter the second number: '))
-    
+
     # See if first value is smaller/larger than second value
     if first < second:
         print('The first number is smaller.')
