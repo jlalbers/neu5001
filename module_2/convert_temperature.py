@@ -19,8 +19,8 @@ def main():
     fahrenheit = (kelvin - 273.15) * (9 / 5) + 32
 
     # Prints temperatures
-    print('The temperature in Celsius is', celsius)
-    print('The temperature in Fahrenheit is', fahrenheit)
+    print('The temperature in Celsius is', celsius,
+    '\nThe temperature in Fahrenheit is', fahrenheit)
 
 
 main()

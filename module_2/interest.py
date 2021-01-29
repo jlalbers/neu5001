@@ -6,7 +6,7 @@ Module 2 Practice 1
 
 Calculates accrued compound monthly interest after 1, 2, and 3 months.
 '''
-
+# Use round function to shorten output
 
 def main():
 
@@ -23,9 +23,9 @@ def main():
 
     # Print the balances
     print('Initial Balance: ', principle)
-    print('After One Month: ', month_1)
-    print('After Two Months: ', month_2)
-    print('After Three Months: ', month_3)
+    print('After One Month: ', round(month_1, 2))
+    print('After Two Months: ', round(month_2, 2))
+    print('After Three Months: ', round(month_3, 2))
 
 
 main()

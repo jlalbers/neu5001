@@ -20,8 +20,8 @@ def main():
     unit_price_2_litre = price_2_litre / 2
 
     # Print unit prices
-    print('Six-pack price per litre:', unit_price_6_pack)
-    print('Two-litre price per litre:', unit_price_2_litre)
+    print('Six-pack price per litre:', round(unit_price_6_pack, 2))
+    print('Two-litre price per litre:', round(unit_price_2_litre, 2))
 
 
 main()

@@ -17,11 +17,7 @@ def main():
     letter_o = ' OOO \nO   O\nO   O\nO   O\n OOO \n'
 
     # Print letters
-    print(letter_h)
-    print(letter_e)
-    print(letter_l)
-    print(letter_l)
-    print(letter_o)
+    print(letter_h + '\n' + letter_e + '\n' + 2 * (letter_l + '\n') + letter_o + '\n')
 
 
 main()

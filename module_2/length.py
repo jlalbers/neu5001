@@ -20,9 +20,9 @@ def main():
     miles = feet / 5280
 
     # Print results
-    print('The length in inches is', inches)
-    print('The length in feet is', feet)
-    print('The length in miles is', miles)
+    print('The length in inches is', round(inches, 3))
+    print('The length in feet is', round(feet, 3))
+    print('The length in miles is', round(miles, 3))
 
 
 main()
