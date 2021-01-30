@@ -3,7 +3,7 @@ Jameson Albers
 CS 5001, Spring 2021
 Module 3 Practice 8
 
-This program outputs a truth table based on inputted values and
+This program outputs a truth table based on given values and
 predetermined comparisons.
 '''
 
@@ -17,7 +17,7 @@ def main():
     # Calculate A and B
     a_values = []
     b_values = []
-    for i in range(8):
+    for i in range(8):  # Calculates A and B for each row of the table
         a_values.append((p_values[i] and q_values[i]) or not r_values[i])
         b_values.append(not(p_values[i] and (q_values[i] or not r_values[i])))
 
@@ -41,6 +41,7 @@ def main():
             p_values[i] + q_values[i] + r_values[i]
             + a_values[i] + b_values[i] + '\n' + divider
         )
+    print('\n')
 
 
 main()
