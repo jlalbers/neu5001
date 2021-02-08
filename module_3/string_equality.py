@@ -10,9 +10,9 @@ Reads an input from the user and responds if input is "Hi".
 def main():
 
     # Get input from user
-    greeting = input('Say something...\n')
+    greeting = input('Say something...\n').upper()
 
-    if greeting == 'Hi':
+    if greeting == 'HI':
         print('Hi, how are you?\nDone.')
 
     else:

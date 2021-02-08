@@ -20,8 +20,8 @@ def smaller(first, second):
 
 def main():
 
-    input_1 = int(input('Enter the first integer: '))
-    input_2 = int(input('Enter the second integer: '))
+    input_1 = float(input('Enter the first integer: '))
+    input_2 = float(input('Enter the second integer: '))
 
     result = smaller(input_1, input_2)
     print(result)

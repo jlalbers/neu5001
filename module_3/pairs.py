@@ -14,7 +14,7 @@ def main():
 
     # Convert to ints
     for i in range(len(inputs)):
-        inputs[i] = int(inputs[i])
+        inputs[i] = float(inputs[i])
 
     # Sort list of inputs
     inputs.sort()

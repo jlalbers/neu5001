@@ -11,7 +11,7 @@ positive/negative.
 def main():
 
     # Get number from user
-    number = int(input('Enter an integer: '))
+    number = float(input('Enter an integer: '))
 
     if number % 2 == 0:
         if number < 0:

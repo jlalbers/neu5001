@@ -19,8 +19,8 @@ def build_string(string, first_line, second_line, third_line):
 
 
 def main():
-
-    print(build_string('hi', 4, 2, 3))
+    user_input = input('Enter the string you want to repeat: ')
+    print(build_string(user_input, 4, 2, 3))
 
 
 main()

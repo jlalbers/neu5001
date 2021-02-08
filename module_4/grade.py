@@ -12,7 +12,9 @@ def grade(score):
        Parameters: numeric grade\n
        Returns: letter grade as string'''
 
-    if score >= 93:
+    if score <0:
+        return 'Please enter a valid score.'
+    elif score >= 93:
         return 'A'
     elif score >= 90:
         return 'A-'
@@ -28,7 +30,7 @@ def grade(score):
         return 'C'
     elif score >= 65:
         return 'C-'
-    else:
+    elif score >= 0:
         return 'F'
 
 
