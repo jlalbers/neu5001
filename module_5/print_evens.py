@@ -12,7 +12,7 @@ def print_evens():
 
     i = 2  # Initialize loop variable
     while i <= 100:  # Loops print() for 2 thru 100
-        print(i, end=' ', flush=True)  # Prints values of i on the same line
+        print(i, end=' ')  # Prints values of i on the same line
         i += 2  # Advances to next even number
 
     return
