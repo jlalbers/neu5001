@@ -16,13 +16,14 @@ def compare_lists(list_1, list_2):
         for x,y in zip(list_1, list_2):
             if x != y:
                 are_same = False
+                break
 
     return are_same
 
 
 def main():
 
-    print(compare_lists(['a', 'b', 'c'], ['a', 'b']))
+    print(compare_lists(['a', 'b', 'c'], ['a', 'b', 'c']))
 
 
 main()
