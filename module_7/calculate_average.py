@@ -20,7 +20,7 @@ def calculate_average(numbers):
 
 def main():
 
-    print(calculate_average([]))
+    print(calculate_average([5, 4, 7]))
 
 
 main()

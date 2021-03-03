@@ -12,6 +12,8 @@ def make_verse(animal, sound):
        Parameters: strings of animal and sound\n
        Outputs: verse using animal and sound'''
 
+    animal = str(animal)
+    sound = str(sound)
     
     verse = ('Old MacDonald had a farm, ee-igh, ee-igh, oh!\n'
              + 'And on that farm he had a ' + animal + ', ee-igh, ee-igh, oh!\n'
@@ -21,20 +23,15 @@ def make_verse(animal, sound):
              + sound + ', ' + sound + '.\n'
              + 'Old MacDonald had a farm, ee-igh, ee-igh, oh!\n')
 
-    print(verse)
-
-    return
-
+    return verse
 
 def main():
 
-    print('Old Macdonald for Cows, Sheep, Pigs, Chickens, and Foxes\n')
-
-    make_verse('cow', 'moo')
-    make_verse('sheep', 'baa')
-    make_verse('pig', 'oink')
-    make_verse('chicken', 'cluck')
-    make_verse('fox', 'EEKEEKEEKEEEEKEKEKEK')
+    test_list = [('cow', 'moo'), ('sheep', 'baaa'), ('pig', 'oink'), (1, 4.0), ((1, 2), ['hi', 'there'])]
+    
+    for item in test_list:
+        (x, y) = item
+        verse = make_verse(x, y)
 
 
 main()
