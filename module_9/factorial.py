@@ -12,4 +12,4 @@ def factorial(n):
     else:
         return n * factorial(n - 1)
 
-print(factorial(30))
+print(factorial(3))

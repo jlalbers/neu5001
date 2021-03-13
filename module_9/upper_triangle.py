@@ -13,4 +13,11 @@ def upper_triangle(n):
         print('*' * n)
         upper_triangle(n-1)
 
+def other_upper_triangle(n):
+    if n > 3:
+        print('*' * n)
+        upper_triangle(n-1)
+    else:
+        print('***\n**\n*')
+
 upper_triangle(5)

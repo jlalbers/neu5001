@@ -13,4 +13,4 @@ def choices(k, n):
     else:
         return choices(k-1, n-1) + choices(k, n-1)
 
-print(choices(2, 6))
+print(choices(2, 3))
