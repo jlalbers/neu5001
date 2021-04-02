@@ -1,0 +1,2 @@
+This is the test file. It will provide a number of words to the functions
+to determine the number of words this file contains.
