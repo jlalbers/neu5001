@@ -13,6 +13,7 @@ def get_dictionary(filename):
     dictionary = open(filename)
     contents = dictionary.read()
     output = ast.literal_eval(contents)  # Parses string into dictionary object
+    dictionary.close()
     return output
 
 

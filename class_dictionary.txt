@@ -1,1 +1,1 @@
-{'python': [['snakey language', 'super cool programming language'], ['snek', 'language', 'objectoriented', 'language']], 'java': [['cup of coffee'], ['coffee', 'language']], 'variable': [['empty box to put stuff into'], ['datastructure', 'variable']], 'list': [['ordered mutable data structure'], ['list', 'datastructure']]}
+{'python': [['programming language', 'snake'], ['language', 'interpreted', 'langage', 'snake']], 'list': [['mutable, ordered data structure'], ['datastructure', 'index']], 'java': [['another programming language'], ['coffee', 'language']]}
