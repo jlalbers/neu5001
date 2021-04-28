@@ -7,7 +7,6 @@
 # ------------------------------------------------------------------------------
 import os
 import sys
-import pathlib
 import csv
 import time
 import qrcode
@@ -384,7 +383,7 @@ def manage_item(item_list, item_object, box_set):
 #    box.
 # ---If item name is changed, rename picture file according to new item name.
 # ---If item name is changed, check it against other items to make sure another
-#    item does not have the same name.        
+#    item does not have the same name.  
 
 
 def manage_boxes_menu():
@@ -616,6 +615,8 @@ def main():
             print()
             choice = main_menu()
     program_quit()
+    print('Thanks for using Move Helpr!')
+    time.sleep(1)
 
 
 main()
