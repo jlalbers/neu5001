@@ -1,5 +1,5 @@
 # **Move Helpr Documentation** <!-- omit in toc -->
-### Current Version: v0.1 <!-- omit in toc -->
+### **Current Version: v0.1** <!-- omit in toc -->
 
 Move Helpr is a prototype application designed to make your move easier. This project originated as my final project for Northeastern University - Vancouver's CS 5001 final project assignment.
 
@@ -13,11 +13,20 @@ Move Helpr is a prototype application designed to make your move easier. This pr
   - [**Items**](#items)
   - [**Boxes**](#boxes)
   - [**Actions**](#actions)
-- [**Source Code Documentation**](#source-code-documentation)
 - [**Known Issues and Bugs**](#known-issues-and-bugs)
 - [**Planned Features**](#planned-features)
 - [**Changelog**](#changelog)
   - [**v0.x**](#v0x)
+- [**Source Code Documentation**](#source-code-documentation)
+  - [**Class `item`**](#class-item)
+    - [**Constructor**](#constructor)
+    - [**Attributes**](#attributes)
+    - [**Methods**](#methods)
+  - [**Class `box`**](#class-box)
+    - [**Constructor**](#constructor-1)
+    - [**Attributes**](#attributes-1)
+    - [**Methods**](#methods-1)
+- [### **Functions**](#-functions)
 
 ---
 
@@ -100,9 +109,6 @@ The program allows for several actions to enable the creation and management of 
    The program can generate documents from your items and boxes, such as inventory sheets for an individual box or a master list of all items for your move. QR codes can also be generated to tape/print onto boxes that contain the box information and item list. Currently, only QR codes are implemented, but a full document suite is planned for a future release.
 
 ---
-## **Source Code Documentation**
-
----
 ## **Known Issues and Bugs**
 1. **Item Importation** - If more than one item is stored in the items .csv file, only the first item will be automatically added to the box. The rest will be added to the unboxed items list despite having an assigned box.
    
@@ -139,6 +145,180 @@ The program allows for several actions to enable the creation and management of 
 ### **v0.x**  
 * **v0.1** - Initial upload and documentation.
 
+---
+## **Source Code Documentation**
+### **Class `item`**
+#### **Constructor**  
+
+`Item(name, value=0.0, quantity=1, serial='', picture='', box=0)`: `Item` object constructor method
+* Parameters:  
+  `name`: accepts `str` argument. Returns `TypeError` if argument is not a `str` or `ValueError` if empty string is passed.
+
+  `value`: accepts `int` or `float` argument. Passes `0.0` if no argument is given. Returns `TypeError` if argument is not a `str` or `float` or `ValueError` if the value passed is less than `0`.
+
+  `quantity`: accepts `int` argument. Passes `1` if no argument is given. Returns `TypeError` if argument is not an `int` or `ValueError` if argument is less than `1`.
+
+  `serial`: accepts `str` argument. Passes empty `str` if no argument is given. Returns `TypeError` if argument is not `str`.
+
+  `picture`: accepts `str` argument. Passes empty `str` if no argument is given. Returns `TypeError` if argument is not `str`.
+
+  `box`: accepts `int` argument. Passes `0` if no argument is given. Returns `TypeError` if argument is not `int` or `ValueError` if argument is less than `0`.
+
+* Outputs:
+  `Item` object
+
+#### **Attributes**
+
+`self.name`: item name. Type `str`
+
+`self.id`: item ID. Type `int`. Generated with `name` parameter from constructor method using `int.from_bytes(name.encode(), 'little')`
+
+`self.value`: item value. Type `float`
+
+`self.quantity`: item quantity. Type `int`
+
+`self.serial`: item serial number. Type `str`
+
+`self.picture`: item picture file path. Type `str`
+
+`self.box`: item box. Type `int`
+
+#### **Methods**
+
+`get_name()`: name getter method
+* Parameters: None
+* Outputs:  
+  `self.name`
+
+`get_id()`: ID number getter method
+* Parameters: None
+* Outputs:  
+  `self.id`
+
+`get_value()`: value getter method
+* Parameters: None
+* Outputs:  
+  `self.value`
+
+`get_quantity()`: quantity getter method
+* Parameters: None
+* Outputs:  
+  `self.quantity`
+
+`get_serial()`: serial number getter method
+* Parameters: None
+* Outputs:  
+  `self.serial`
+
+`get_picture()`: picture filepath getter method
+* Parameters: None
+* Outputs:  
+  `self.picture`
+
+`get_box()`: box number getter method
+* Parameters: None
+* Outputs:  
+  `self.box`
+
+`update_name(new_name)`: number setter method
+* Parameters:  
+  `new_name`. Type `int`. Returns `TypeError` if argument not `int` or `ValueError` if argument is empty `str`. Also updates `self.id`
+* Outputs: None
+
+`update_value(new_value)`: value setter method
+* Parameters:  
+  `new_value`: Type `int` or `float`. Returns `TypeError` if argument not `int, float` or `ValueError` if argument is less than `0`
+* Outputs: None
+
+`update_quantity(new_quantity)`: quantity setter method
+* Parameters:  
+  `new_quantity`: Type `int`. Returns `TypeError` if argument is not `int` or `ValueError` if argument is less than `1`.
+* Outputs: None
+
+`update_serial(new_serial)`: serial number setter method
+* Parameters:  
+  `new_serial`: Type `str`. Returns `TypeError` if argument is not `str`
+* Outputs: None
+
+`update_picture(new_picture)`: picture filepath setter method
+* Parameters:  
+  `new_picture`: Type `str`. Returns `TypeError` if argument is not `str`
+
+`update_box(new_box)`: box number setter method
+* Parameters:  
+  `new_box`: Type `int`. Returns `TypeError` if argument is not `int` or `ValueError` if argument is less than `0`
+* Outputs: None
+
+`__str__()`: object `str` getter method
+* Parameters: None  
+* Outputs:  
+  `str` containing all item attributes
+
+### **Class `box`**
+#### **Constructor**
+
+`Box(box_number, box_room, box_items = [])`: `Box` object constructor method
+* Parameters:  
+  `box_number`: Type `int`. Returns `TypeError` if argument is not `int` or `ValueError` if argument is less than `1`
+
+  `box_room`: Type `str`. Returns `TypeError` if argument is not `str` or `ValueError` if argument is empty `str`
+
+  `box_items`: Type `list`. Returns `TypeError` if argument is not `str` or if elements in list are not `Item` objects
+
+#### **Attributes**
+
+`self.box_number`: box number. Type `int`
+
+`self.box_room`: box room. Type `str`
+
+`self.box_items`: box items. Type `list`. Elements are `Item` objects.
+
+`self.box_value`: box value. Type `float`. Assigned automatically based on `self.box_items`
+
+#### **Methods**
+
+`get_number()`: box number getter method
+* Parameters: None
+* Outputs:  
+  `self.box_number`
+
+`get_room()`: box room getter method
+* Parameters: None
+* Outputs:  
+  `self.box_room`
+
+`get_items()`: box items setter method
+* Parameters: None
+* Outputs:  
+  `self.items`
+
+`update_value()`: privete box value setter method
+* Parameters: None
+* Outputs: None  
+  Private method to recalculate box value
+
+`get_value()`: box value getter method
+* Parameters: None
+* Outputs:  
+  `self.box_value
+
+`add_item(new_item)`: box items setter method (adds `Item` to box)
+* Parameters:  
+  `new_item`: `Item` object. Raises `TypeError` if argument is not `Item` object
+* Outputs: None
+
+`remove_item(old_item)`: box items setter method (removes `Item` from box)
+* Parameters:  
+  `old_item`: `Item` object. Raises `TypeError` if argument is not `Item` object
+* Outputs: None
+  
+`__str()__`: object `str` getter method
+* Parameters: None
+* Outputs:  
+  `str` containing all box attributes
+
+### **Functions**
+---
 ```
                       |
                      _=_
@@ -148,5 +328,5 @@ The program allows for several actions to enable the creation and management of 
  |  | |_| |-__| ||          |  |,-.|  |-_   __
 |H|-|   '                          |     | |  |
                                          |_|  |
-Created in Vancouver
+Created in Vancouver :)
 ```

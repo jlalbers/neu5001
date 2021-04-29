@@ -74,19 +74,6 @@ class Box:
             raise TypeError
 
 
-    def generate_qr(self):
-        self.update_value()
-        contents = (
-            'Box #: ' + str(self.box_number) +
-            '\nBox Value: ' + str(self.box_value) +
-            '\nItems:'
-            )
-        for item in self.box_items:
-            contents += '\n\t -' + item.get_name()
-        code = qrcode.make(contents)
-        code.show()
-
-
     def __str__(self):
         self.update_value()
         text = ('Box #: ' + str(self.box_number) +
