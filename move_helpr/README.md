@@ -26,7 +26,7 @@ Move Helpr is a prototype application designed to make your move easier. This pr
     - [**Constructor**](#constructor-1)
     - [**Attributes**](#attributes-1)
     - [**Methods**](#methods-1)
-- [### **Functions**](#-functions)
+  - [**Functions**](#functions)
 
 ---
 
@@ -318,6 +318,7 @@ The program allows for several actions to enable the creation and management of 
   `str` containing all box attributes
 
 ### **Functions**
+
 ---
 ```
                       |
