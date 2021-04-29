@@ -380,11 +380,11 @@ def manage_item(item_list, item_object, box_set):
             if keep_going_choice.lower() == 'n':
                 keep_managing = False
 # Missing features:
-# ---If box # is changed, remove item from items list and add to the appropriate
-#    box.
-# ---If item name is changed, rename picture file according to new item name.
-# ---If item name is changed, check it against other items to make sure another
-#    item does not have the same name.  
+    # ---If box # is changed, remove item from items list and add to the appropriate
+    #    box.
+    # ---If item name is changed, rename picture file according to new item name.
+    # ---If item name is changed, check it against other items to make sure another
+    #    item does not have the same name.  
 
 
 def manage_boxes_menu():
