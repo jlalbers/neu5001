@@ -48,6 +48,7 @@ def check_user_dir(username, dir):
         items_exist = True
     else:
         items_exist = False
+        new_file = open(dir + '/' + username + '_items.csv', 'w')
     '''if username + '_boxes.csv' in files:
         boxes_exist = True
     else:
